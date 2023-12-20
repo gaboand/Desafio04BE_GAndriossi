@@ -1,0 +1,24 @@
+<main class="container">
+<div>
+  <h1 class="title">LISTADO DE PRODUCTOS</h1>
+</div>
+
+<div class="productList">
+  {{#each products}}
+    <div class="productCard">
+      <div class="cardProduct__image">
+        <img src="{{this.thumbnail}}" alt="{{this.title}}" />
+      </div>
+      <div class="cardProduct__info">
+        <h3 class="nombreProducto">{{this.title}}</h3>
+        <p class="detalleProducto">Descripcion: {{this.description}}</p>
+        <p class="detalleProducto">Precio: ${{this.price}}</p>
+        <p class="detalleProducto">Stock: {{this.stock}}</p>
+        <p class="detalleProducto">Codigo: {{this.code}}</p>
+        <p class="detalleProducto">Id Producto: {{this.id}}</p>
+      </div>
+
+    </div>
+  {{/each}}
+</div>
+</main>
